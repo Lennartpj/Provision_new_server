@@ -1,0 +1,17 @@
+---
+- name: Provision new server
+  hosts: all
+  roles:
+  - change_hostname
+  - register_at_satellite
+  - domain_join
+  - root_config
+  - install_cmk
+  - install_nessus
+  - install_trillix
+  - update
+  - Create_New_machine-id
+  - stop_extern_DNS_requests
+  - AIDE_Update_Baseline
+  - Register_insights
+  - reboot
